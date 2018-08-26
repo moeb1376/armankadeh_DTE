@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <!--<link href="css/StyleSheet.css" rel="stylesheet">-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!--<link href="css/effect.css" rel="stylesheet" type="text/css">-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/unpkg.js"></script>
+    <meta name="viewport" content="initial-scale=1">
     <title>Login Page</title>
 </head>
 <body>
@@ -49,7 +50,7 @@
                     <transition name="custom-classes-transition"
                                 enter-active-class="animated zoomIn"
                                 leave-active-class="animated zoomOut">
-                        <div v-if="seen" class="main-div card">
+                        <div v-show="return_global()" class="main-div card">
                             <div class="panel">
                                 <h2>به وبسایت ما خوش آمدید</h2>
                                 <p>لطفا نام کاربری و کلمه عبور خود را وارد کنید</p>
@@ -64,16 +65,18 @@
                                            class="form-control1"
                                            placeholder="رمز عبور" required/>
                                     <button class="eye_btn" type="button" v-on:mousedown="show_hide_pass"
-                                            v-on:mouseup="hide_pass">
+                                            v-on:mouseup="show_hide_pass">
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </div>
                                 <br/>
-
+                                <a class="forget_link" href="">ایمیل خود را فراموش کرده اید؟</a>
+                                <br/>
                                 <button class="btn btn-primary" type="submit">ورود</button>
-                                <button class="btn btn-primary1" type="button" v-on:click="change_pages">ثبت نام
-                                </button>
-                                <a href="">رمز خود را فراموش کرده اید؟</a>
+                                <div>
+                                    <button class="btn btn-primary1" type="button" @click="change_pages">ثبت نام
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </transition>
@@ -82,7 +85,7 @@
                     <transition name="custom-classes-transition"
                                 enter-active-class="animated zoomIn"
                                 leave-active-class="animated zoomOut">
-                        <div v-if="show" class="main-div card">
+                        <div v-show="!return_global()" class="main-div card">
                             <div class="panel">
                                 <h2>به وبسایت ما خوش آمدید</h2>
                                 <p>لطفا مشخصات خود را وارد کنید</p>
@@ -96,7 +99,7 @@
                                     <input class="form-control1" :type="passwordFieldType" v-model="password"
                                            placeholder="کلمه عبور" required/>
                                     <button class="eye_btn" type="button" v-on:mousedown="show_hide_pass"
-                                            v-on:mouseup="hide_pass">
+                                            v-on:mouseup="show_hide_pass">
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </div>
@@ -104,18 +107,29 @@
                                     <input class="form-control1" :type="repasswordFieldType" v-model="re_password"
                                            placeholder="تکرار کلمه عبور" required/>
                                     <button class="eye_btn" type="button" v-on:mousedown="show_hide_repass"
-                                            v-on:mouseup="hide_repass">
+                                            v-on:mouseup="show_hide_repass">
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </div>
                                 <input class="form-control1" type="email" placeholder="ایمیل" required/>
                                 <input class="form-control1" type="text" placeholder="شماره تماس" required/>
-                                <label class="container"><p class="text">تمام <a href="https://google.com">قوانین</a> را پذیرفتم</p>
-                                    <input type="checkbox" name ="rules" required/>
-                                <span class="checkmark"></span>
-                                </label>
-                                <button class="btn btn-primary" type="submit">ثبت نام</button>
-                                <button class="btn btn-primary1" type="button" @click="change_pages1">ورود</button>
+                                <!--<br/>-->
+                                <div>
+                                    <label class="container"><p class="text">تمام <a
+                                            href="https://google.com">قوانین</a> را
+                                        پذیرفتم</p>
+                                        <input class="checkmark" type="checkbox" name="rules" required/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <br/>
+                                <!--<br/>-->
+                                <!--<br/>-->
+                                <div>
+                                    <button class="btn btn-primary" type="submit">ثبت نام</button>
+                                    <button class="btn btn-primary1" type="button" @click="change_pages1">ورود
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </transition>

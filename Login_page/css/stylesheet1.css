@@ -1,0 +1,72 @@
+body{
+    font-size: 100%;
+    background:#0086E5;
+    font-family: 'B Tabassom', serif;
+}
+@font-face {
+    font-family: 'B Tabassom';
+    src: local('B Tabassom'),
+    local('BTabassom'),
+    url('fonts/BTabassom.woff') format('woff'),
+    url('fonts/BTabassom.eot') format('eot'),
+    url('fonts/BTabassom.ttf') format('truetype');
+    font-weight: 400;
+    font-stretch: normal;
+}
+.element-main {
+    width:25%;
+    background: #fff;
+    margin:8em auto 0;
+    border-radius: 5px;
+    padding:2em 2em;
+}
+.element-main h1 {
+    text-align: center;
+    font-size: 2.3em;
+    color:#0086E5;
+    font-weight: 700;
+    font-family: 'B Tabassom', serif;
+}
+.element-main p {
+    font-size: 1em;
+    font-family: 'B Tabassom', serif;
+    color: #696969;
+    line-height: 1.5em;
+    margin: 1.5em 0;
+    text-align:center;
+}
+.email{
+    font-size: 1em;
+    font-family: 'B Tabassom', serif;
+    color: #000000;
+    padding: 1em 0.5em;
+    display: block;
+    width: 95%;
+    outline: none;
+    margin-bottom: 1em;
+    text-align:right;
+    border: 1px solid #B9B9B9;
+}
+.reset {
+    font-size: 1em;
+    font-family: 'B Tabassom', serif;
+    color: #fff;
+    background:#0086E5;
+    width: 50%;
+    padding: 0.8em 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: 3px solid #045B99;
+    display: block;
+    margin: 1.5em auto 0;
+}
+.reset:hover{
+    background:#1D1C1C;
+    border-bottom: 3px solid #2F2F2F;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}

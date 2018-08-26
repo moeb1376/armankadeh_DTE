@@ -1,4 +1,3 @@
-
 body {
     background-color: #ffffff;
     height: 100%;
@@ -44,17 +43,16 @@ html {
     url('fonts/BTabassom.ttf') format('truetype');
     font-weight: 400;
     font-stretch: normal;
-    /*font-style: normal;*/
 }
 
-.form-heading {
-    color: #fff;
-    font-size: 23px;
-}
+/*.form-heading {*/
+/*color: #fff;*/
+/*font-size: 2vw;*/
+/*}*/
 
 .panel h2 {
     color: #444444;
-    font-size: 35px;
+    font-size: 3.5vw;
     margin: 0 0 8px 0;
     font-weight: bold;
     font-family: 'B Tabassom', serif;
@@ -62,7 +60,7 @@ html {
 
 .panel p {
     color: #777777;
-    font-size: 25px;
+    font-size: 1.5vw;
     margin-bottom: 30px;
     line-height: 24px;
     font-family: 'B Tabassom', serif;
@@ -71,9 +69,9 @@ html {
 .login-form {
     border-color: #f0ad4e;
     color: #ffffff;
-    font-size: 14px;
+    /*font-size: 1vw;*/
     width: 100%;
-    height: 50px;
+    height: 5vw;
     line-height: 50px;
     padding: 0;
     text-align: center;
@@ -82,11 +80,12 @@ html {
 
 .form-group {
     margin-bottom: 25px;
+    position: relative;
 }
 
 .forgot a {
     color: #777777;
-    font-size: 14px;
+    font-size: 1vw;
     text-decoration: underline;
 }
 
@@ -95,51 +94,51 @@ html {
     margin-bottom: 30px;
 }
 
-.botto-text {
-    color: #ffffff;
-    font-size: 14px;
-    margin: auto;
-}
+/*.botto-text {*/
+/*color: #ffffff;*/
+/*font-size: 1vw;*/
+/*margin: auto;*/
+/*}*/
 
-.back {
-    text-align: left;
-    margin-top: 10px;
-}
+/*.back {*/
+/*text-align: left;*/
+/*margin-top: 10px;*/
+/*}*/
 
-.back a {
-    color: #444444;
-    font-size: 13px;
-    text-decoration: none;
-}
+/*.back a {*/
+/*color: #444444;*/
+/*font-size: 1vw;*/
+/*text-decoration: none;*/
+/*}*/
 
 .btn.btn-primary {
     position: absolute;
     background: #0039cb none repeat scroll 0 0;
     /*border-color: #f0ad4e;*/
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.5vw;
     width: 45%;
-    height: 50px;
-    line-height: 50px;
+    height: 5vw;
+    line-height: 50%;
     padding: 0;
     text-align: center;
     /*margin-bottom:25px;*/
     border-radius: 10px 0 0 10px;
     left: 5%;
-    top: 599px;
+    /*top: 599px;*/
+    bottom: 0;
     font-family: 'B Tabassom', serif;
 }
 
 .form-control1 {
     display: block;
     width: 100%;
-    height: 34px;
+    height: 3.4vw;
     padding: 6px 12px;
-    font-size: 17px;
+    font-size: 1.7vw;
     line-height: 1.42857143;
     color: #555;
-    background-color: #fff;
-    background-image: none;
+    background: #fff none;
     border: 1px solid #ccc;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -178,16 +177,17 @@ html {
     /*border-width: thick;*/
     color: #ffffff;
     width: 45%;
-    height: 50px;
-    line-height: 50px;
+    height: 5vw;
+    line-height: 50%;
     padding: 0;
     text-align: center;
     /*margin-bottom:25px;*/
     border-radius: 0 10px 10px 0;
     right: 5%;
-    top: 599px;
+    bottom: 0;
+    /*top: 599px;*/
     font-family: 'B Tabassom', serif;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .btn.btn-primary1:hover {
@@ -208,7 +208,7 @@ html {
 
 a {
     font-family: 'B Tabassom', serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 
@@ -227,6 +227,10 @@ a {
 
 }
 
+.fa {
+    font-size: larger;
+}
+
 .fa-eye {
     color: #000;
     background: none;
@@ -238,16 +242,28 @@ a {
     margin-bottom: 5px;
 }
 
-
 .checkmark {
-    position: absolute;
+    /*position: absolute;*/
     top: -19px;
     right: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+    height: 2.5vw;
+    width: 2.5vw;
+    background-color: #000000;
 }
-.container{
+
+.container {
+    /*display: block;*/
+    /*position: relative;*/
+    /*padding-left: 35px;*/
+    /*margin-bottom: 12px;*/
+    /*cursor: pointer;*/
+    /*font-size: 1.5vw;*/
+    /*-webkit-user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
+    /*color: #000;*/
+
     display: block;
     position: relative;
     padding-left: 35px;
@@ -258,45 +274,165 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: #000;
 }
 
+/* Hide the browser's default checkbox */
 .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2.5vw;
+    width: 2.5vw;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: #2196F3;
 }
 
+/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
+/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
     display: block;
 }
 
+/* Style the checkmark/indicator */
 .container .checkmark:after {
     left: 9px;
     top: 5px;
-    width: 5px;
-    height: 10px;
+    width: 0.5vw;
+    height: 1vw;
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.text{
+
+.text {
     position: absolute;
     top: -30px;
-    font-size: 18px;
+    font-size: 1.5vw;
     font-family: 'B Tabassom', serif;
     right: 35px;
     color: #000;
+}
+
+.btn.btn-primary2 {
+    position: absolute;
+    /* background: #2962ff none repeat scroll 0 0; */
+    /* border-color: #7953d2; */
+    /* border-width: thick; */
+    /*color: #ffffff;*/
+    width: 90%;
+    height: 5vw;
+    line-height: 50%;
+    padding: 0;
+    text-align: center;
+    /* margin-bottom: 25px; */
+    border-radius: 10px 10px 10px 10px;
+    right: 5%;
+    top: 523px;
+    font-family: 'B Tabassom', serif;
+    font-size: 1.5vw;
+    background: none;
+    color: black;
+    border: thick #0d47a1;
+}
+
+.btn.btn-primary2:hover {
+    background-color: #000063;
+    color: #ffffff;
+}
+
+.btn.btn-primary3 {
+    position: absolute;
+    /*background: #2962ff none repeat scroll 0 0;*/
+    /* border-color: #7953d2; */
+    /*border-width: thick; */
+    color: #ffffff;
+    width: 50%;
+    height: 5vw;
+    line-height: 50%;
+    padding: 0;
+    text-align: center;
+    /* margin-bottom: 25px; */
+    border-radius: 10px 10px 10px 10px;
+    right: 25%;
+    top: 388px;
+    font-family: 'B Tabassom', serif;
+    font-size: 1.5vw;
+    background: #009688;
+    margin-top: 12px;
+}
+
+.btn.btn-primary3:hover {
+    background-color: #005662;
+    color: #ffffff;
+}
+
+/*.description{*/
+/*position: absolute;*/
+/*color: #444444;*/
+/*font-size: 2vw;*/
+/*font-weight: bold;*/
+/*font-family: 'B Tabassom', serif;*/
+/*top: 290px;*/
+/*right: 0;*/
+/*left: 0;*/
+/*padding: 6px 12px;*/
+/*margin-bottom: 30px;*/
+/*}*/
+
+.forget_link {
+    position: absolute;
+    /*margin-bottom: 20px;*/
+    /*margin-top: 20px;*/
+    left: 0;
+    top: 22%;
+    display: block;
+    width: 100%;
+    height: 3.4vw;
+    padding: 0;
+    font-size: 1.5vw;
+    /*line-height: 1.42857143;*/
+    /*color: #555;*/
+    /*background-color: #fff;*/
+    /*background-image: none;*/
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 4px;*/
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);*/
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);*/
+    /*-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;*/
+    /*-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;*/
+    /*transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;*/
+    /*background: #f7f7f7 none repeat scroll 0 0;*/
+    /*border: 1px solid #d4d4d4;*/
+    /*border-radius: 4px;*/
+    /*font-size: 17px;*/
+    /*height: 50px;*/
+    /*line-height: 50px;*/
+    margin-bottom: 25px;
+    /*text-align: right;*/
+    margin-top: 40px;
+    font-family: 'B Tabassom', serif;
 }
