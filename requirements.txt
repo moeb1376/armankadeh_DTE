@@ -1,0 +1,6 @@
+Django
+djangorestframework
+djongo
+django-widget-tweaks
+python-decouple
+requests
